@@ -43,8 +43,8 @@ const ProjectCard: React.FC<Props> = ({
         </div>
       </div>
       <div className={styles["project-card__tags"]}>
-        {tags.map((tag) => (
-          <TagComponent tag={tag} />
+        {tags.map((tag, i) => (
+          <TagComponent tag={tag} key={i} />
         ))}
       </div>
       <div>

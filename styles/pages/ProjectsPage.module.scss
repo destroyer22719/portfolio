@@ -1,0 +1,25 @@
+@import "../variables";
+
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  &__res-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__clear-search {
+    fill: $purple_dark1;
+    margin-right: 1rem;
+  }
+
+  &__clear-search:hover {
+    border-radius: 0.5rem;
+    fill: $off_yellow;
+    background-color: $purple_dark1;
+  }
+}

@@ -1,7 +1,8 @@
-import { useRouter } from "next/router";
+"use client"
+
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "../styles/components/SearchBar.module.scss";
-
 
 const SearchBarComponent = () => {
   const router = useRouter();
