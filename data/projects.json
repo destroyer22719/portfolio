@@ -1,0 +1,9 @@
+[
+  {
+    "name": "FoodFlation",
+    "desc": "A website that tracks the price history of over 13k grocery store items in 50 stores accross Canada and the US to measure inflation.",
+    "url": "https://foodflation.me",
+    "github": "https://github.com/destroyer22719/FoodFlation",
+    "tags": ["NodeJS", "ExpressJS", "NextJS", "SCSS", "MySQL"]
+  }
+]

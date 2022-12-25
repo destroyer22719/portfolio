@@ -1,0 +1,11 @@
+@import "../variables";
+
+.search-bar {
+  &__input {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: lighten($cyan, 10%);
+    padding: 1rem;
+  }
+}
