@@ -5,7 +5,13 @@ const NavBar = () => {
   return (
     <div className={styles["nav-bar"]}>
       <div className={styles["nav-bar__item"]}>
-        <Link href="/project">Projects</Link>
+        <Link href="/projects">Projects</Link>
+      </div>
+      <div className={styles["nav-bar__item"]}>
+        <Link href="/">Home</Link>
+      </div>
+      <div className={styles["nav-bar__item"]}>
+        <Link href="/experiences">Experiences</Link>
       </div>
     </div>
   );

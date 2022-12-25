@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: 4rem;
+  height: 8rem;
   background: $purple_light1;
+  border-top: 1rem solid $purple_dark1;
+  font-size: 2rem;
 
   a, a:visited {
     text-decoration: none;
@@ -18,13 +20,11 @@
     height: 100%;
     display: flex;
     align-items: center;
-    color: $off_yellow
+    color: $off_yellow;
   }
 
   &__item:hover {
     background: $off_yellow;
     color: $purple_light1;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
   }
 }

@@ -3,7 +3,7 @@ import TagComponent from "./TagComponent";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Image from "next/image";
 import styles from "../styles/components/ProjectCard.module.scss";
-import { IconContext } from "react-icons";
+// import { IconContext } from "react-icons";
 
 type Props = {
   name: string;
@@ -28,24 +28,16 @@ const ProjectCard: React.FC<Props> = ({
         <h3>{name}</h3>
         <div className={styles["project-card__icon-section"]}>
           {url && (
-            <Link
-              href={url}
-              className={styles["project-card__header"]}
-            >
-              <IconContext.Provider
-                value={{ className: styles["project-card__icon"] }}
-              >
-                <FiExternalLink size={20} />
-              </IconContext.Provider>{" "}
+            <Link href={url} className={styles["project-card__header"]}>
+              <FiExternalLink
+                size={20}
+                className={styles["project-card__icon"]}
+              />
             </Link>
           )}
           {github && (
             <Link href={github} className={styles["project-card__header"]}>
-              <IconContext.Provider
-                value={{ className: styles["project-card__icon"] }}
-              >
-                <FiGithub size={20} />
-              </IconContext.Provider>
+              <FiGithub size={20} className={styles["project-card__icon"]} />
             </Link>
           )}
         </div>
