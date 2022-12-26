@@ -33,7 +33,8 @@ const getProjects = async (search?: string, tag?: string) => {
     result = data;
   }
 
-  return result;
+  //delete duplicates
+  return result.filter((v,i,a)=>a.findIndex(v2=>(v2.name===v.name))===i);
 };
 
 const ProjectsPage = async ({
@@ -58,7 +59,7 @@ const ProjectsPage = async ({
           )}
         </div>
       )}
-      <div>
+      <div className={styles["projects-page__projects-list"]}>
         {projects.map(({ name, desc, tags, github, image, url }, i) => (
           <ProjectCard
             key={i}

@@ -27,7 +27,7 @@ const ProjectCard: React.FC<Props> = ({
         <h3>{name}</h3>
         <div className={styles["project-card__icon-section"]}>
           {url && (
-            <Link href={url} className={styles["project-card__header"]}>
+            <Link href={url}>
               <FiExternalLink
                 size={30}
                 className={styles["project-card__icon"]}

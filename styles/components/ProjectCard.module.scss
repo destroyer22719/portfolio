@@ -5,22 +5,32 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 75rem;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   background-color: $red_orange;
   box-shadow: 0 0 2rem darken($red_orange, 10%);
   transition: box-shadow 0.2s ease-in-out;
+  margin: 1rem;
+  width: 100%;
+
+  @media screen and (min-width: 750px) {
+    width: 75rem;
+  }
 
   &:hover {
     box-shadow: 0 0 2rem darken($red_orange, 20%);
   }
 
   &__header {
+    word-wrap: break-all;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
+    flex-direction: column;
     width: 100%;
+    @media screen and (min-width: 750px) {
+      flex-direction: row;
+    }
 
     a:visited, a {
       color: $purple_dark1
@@ -45,6 +55,7 @@
     width: 100%;
     margin: 0.5rem;
     align-items: center;
+    flex-wrap: wrap;
 
     a, a:visited {
       text-decoration: none;
