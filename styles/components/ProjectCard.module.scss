@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 40rem;
-  padding: 1rem;
+  width: 75rem;
+  padding: 2.5rem;
   border-radius: 0.5rem;
   background-color: $red_orange;
   box-shadow: 0 0 2rem darken($red_orange, 10%);
@@ -28,7 +28,7 @@
 
     h3 {
       color: $purple_dark1;
-      font-size: 2.5rem;
+      font-size: 4rem;
     }
 
     * {
@@ -61,6 +61,7 @@
     border-radius: 0.5rem;
     transition: color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
+    font-size: 1.5rem;
   }
 
   &__tag:hover {
@@ -79,6 +80,7 @@
   }
 
   &__desc {
+    font-size: 2rem;
     color: $purple_dark1;
   }
 }

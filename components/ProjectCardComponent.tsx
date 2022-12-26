@@ -29,14 +29,14 @@ const ProjectCard: React.FC<Props> = ({
           {url && (
             <Link href={url} className={styles["project-card__header"]}>
               <FiExternalLink
-                size={20}
+                size={30}
                 className={styles["project-card__icon"]}
               />
             </Link>
           )}
           {github && (
             <Link href={github} className={styles["project-card__header"]}>
-              <FiGithub size={20} className={styles["project-card__icon"]} />
+              <FiGithub size={30} className={styles["project-card__icon"]} />
             </Link>
           )}
         </div>
