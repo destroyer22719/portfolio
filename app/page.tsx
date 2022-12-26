@@ -1,10 +1,26 @@
+"use client";
+import { useState } from "react";
+
 import styles from "../styles/pages/HomePage.module.scss";
 import { FaLinkedin, FaGithub, FaFileCsv } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import TagComponent from "../components/TagComponent";
 import Link from "next/link";
+import { BiDownArrow, BiUpArrow } from "react-icons/bi";
+import useWindowSize from "../hooks/useWindowSize";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useEffect } from "react";
 
-export default function Page() {
+function Page() {
+  const size = useWindowSize();
+  const [expand, setExpand] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (size && size > 750) {
+      setExpand(true);
+    }
+  }, [size]);
+
   const skills = [
     "NodeJS",
     "ExpressJS",
@@ -23,21 +39,31 @@ export default function Page() {
       <div className={styles["home-page__header"]}>
         <h1>Nathan Cai</h1>
       </div>
+      <div
+        className={styles["home-page__expand"]}
+        onClick={() => setExpand(!expand)}
+      >
+        {expand ? <BiDownArrow size={40} /> : <BiUpArrow size={40} />}
+      </div>
       <div className={styles["home-page__links"]}>
-        <Link href={"https://www.linkedin.com/in/nathan-cai-dev/"}>
-          <FaLinkedin className={styles["home-page__link"]} size={50} />
-        </Link>
-        <Link href={"https://github.com/destroyer22719"}>
-          <FaGithub className={styles["home-page__link"]} size={50} />
-        </Link>
-        <Link href={"mailto:nathan.cai.ca@gmail.com"}>
-          <div title="nathan.cai.ca@gmail.com">
-            <GrMail className={styles["home-page__link"]} size={50} />
-          </div>
-        </Link>
-        <Link href="#">
-          <FaFileCsv className={styles["home-page__link"]} size={50} />
-        </Link>
+        {expand && (
+          <>
+            <Link href={"https://www.linkedin.com/in/nathan-cai-dev/"}>
+              <FaLinkedin className={styles["home-page__link"]} size={50} />
+            </Link>
+            <Link href={"https://github.com/destroyer22719"}>
+              <FaGithub className={styles["home-page__link"]} size={50} />
+            </Link>
+            <Link href={"mailto:nathan.cai.ca@gmail.com"}>
+              <div title="nathan.cai.ca@gmail.com">
+                <GrMail className={styles["home-page__link"]} size={50} />
+              </div>
+            </Link>
+            <Link href="#">
+              <FaFileCsv className={styles["home-page__link"]} size={50} />
+            </Link>
+          </>
+        )}
       </div>
       <div className={styles["home-page__text"]}>
         <div>
@@ -63,16 +89,22 @@ export default function Page() {
         </div>
       </div>
       <div className={styles["home-page__skills"]}>
-        {skills.map((skill, i) => (
-          <TagComponent
-            tag={skill}
-            key={skill}
-            size={30}
-            className={styles["home-page__skills-item"]}
-            iconClassName={styles["home-page__skills-item-icon"]}
-          />
-        ))}
+        {expand && (
+          <>
+            {skills.map((skill, i) => (
+              <TagComponent
+                tag={skill}
+                key={skill}
+                size={30}
+                className={styles["home-page__skills-item"]}
+                iconClassName={styles["home-page__skills-item-icon"]}
+              />
+            ))}
+          </>
+        )}
       </div>
     </div>
   );
 }
+
+export default Page;

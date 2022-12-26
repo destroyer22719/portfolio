@@ -5,19 +5,35 @@
   padding: 2.5rem;
   border-radius: 2rem;
   background-color: $cyan;
-  grid-template-columns: 1fr 2fr 2fr 2fr;
-  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto 5rem auto auto;
   grid-gap: 1rem;
-  width: 50%;
+  width: 85%;
   color: $purple_dark2;
   place-items: center;
-  // justify-content: start;
+  margin: 5rem 0;
+  box-shadow: 0 0 2rem darken($purple_dark2, 10%);
   grid-template-areas:
-    "header header header header"
-    "link text text text"
-    "link text text text"
-    "link text text text"
-    "skills skills skills skills";
+    "header header"
+    "expand expand"
+    "link skills"
+    "text text"
+    "text text";
+
+  @media (min-width: 750px) {
+    width: 60%;
+    grid-template-columns: auto 2fr 2fr 2fr;
+    grid-template-areas:
+      "header header header header"
+      "link text text text"
+      "link text text text"
+      "link text text text"
+      "skills skills skills skills";
+  }
+
+  &__links, &__skills {
+    padding: 2.5rem;
+  }
 
   &__links,
   &__text {
@@ -45,13 +61,12 @@
   }
 
   &__links {
-    // border: 5px solid red;
-    // background-color: $purple_dark2;
     grid-area: link;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 2rem;
   }
 
   &__link {
@@ -72,6 +87,22 @@
     }
   }
 
+  &__expand {
+    grid-area: expand;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: $purple_dark1;
+    width: 100%;
+    height: 100%;
+    color: $purple_light2;
+
+    @media (min-width: 750px) {
+      display: none;
+    }
+  }
+
   &__skills {
     display: flex;
     flex-wrap: wrap;
@@ -88,12 +119,23 @@
       font-size: 2rem;
       font-weight: bold;
       color: $purple_light2;
-      margin: 0.5rem;
       align-items: center;
       display: flex;
 
       &-icon {
-        margin-right: 0.5rem;
+        margin: 0;
+        
+        & + div {
+          display: none;
+        }
+
+        @media (min-width: 600px) {
+          margin-right: 0.5rem;
+
+          & + div {
+            display: block;
+          }
+        }
       }
     }
 
