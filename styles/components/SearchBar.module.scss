@@ -1,11 +1,15 @@
 @import "../variables";
 
 .search-bar {
+  width: 100%;
   &__input {
+    width: 100%;
     outline: none;
     border: none;
     border-radius: 0.5rem;
     background-color: lighten($cyan, 10%);
-    padding: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 2rem;
   }
 }

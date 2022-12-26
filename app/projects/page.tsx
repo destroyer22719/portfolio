@@ -46,10 +46,16 @@ const ProjectsPage = async ({
     <div>
       {searchParams && (
         <div className={styles["projects-page__res-count"]}>
-          <Link href={"/projects"}>
-            <ClearButton className={styles["projects-page__clear-search"]} />
-          </Link>
-          <h3>{projects.length} Results Found</h3>
+          {(searchParams?.search || searchParams?.tag) && (
+            <>
+              <Link href={"/projects"}>
+                <ClearButton
+                  className={styles["projects-page__clear-search"]}
+                />
+              </Link>
+              <h3>{projects.length} Results Found</h3>
+            </>
+          )}
         </div>
       )}
       <div>
