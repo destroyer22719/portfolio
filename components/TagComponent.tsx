@@ -8,29 +8,36 @@ import Link from "next/link";
 
 type Prop = {
   tag: string;
+  className: string;
+  iconClassName: string;
+  size?: number;
 };
 
-const TagToIcon: React.FC<Prop> = ({ tag }) => {
+const TagToIcon: React.FC<{ tag: string; className: string, size?:number }> = ({
+  tag,
+  className,
+  size=20
+}) => {
   switch (tag) {
     case "NodeJS":
-      return <FaNodeJs size={12} className={styles["project-card__tag-icon"]} />;
+      return <FaNodeJs size={size} className={className} />;
     case "React":
-      return <FaReact size={12} className={styles["project-card__tag-icon"]} />;
+      return <FaReact size={size} className={className} />;
     case "NextJS":
-      return <TbBrandNextjs size={12} className={styles["project-card__tag-icon"]} />;
+      return <TbBrandNextjs size={size} className={className} />;
     case "SCSS":
-      return <FaSass size={12} className={styles["project-card__tag-icon"]} />;
+      return <FaSass size={size} className={className} />;
     case "MySQL":
-      return <SiMysql size={12} className={styles["project-card__tag-icon"]} />;
+      return <SiMysql size={size} className={className} />;
     default:
-      return <RxGear size={12} className={styles["project-card__tag-icon"]} />;
+      return <RxGear size={size} className={className} />;
   }
 };
-const TagComponent: React.FC<Prop> = ({ tag }) => {
+const TagComponent: React.FC<Prop> = ({ tag, className, iconClassName, size }) => {
   return (
     <Link href={`/projects?tag=${tag}`}>
-      <div className={styles["project-card__tag"]}>
-          <TagToIcon tag={tag} />
+      <div className={className}>
+        <TagToIcon tag={tag} className={iconClassName} size={size}/>
         <div>{tag}</div>
       </div>
     </Link>

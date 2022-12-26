@@ -4,15 +4,15 @@ import styles from "../styles/components/NavBar.module.scss";
 const NavBar = () => {
   return (
     <div className={styles["nav-bar"]}>
-      <div className={styles["nav-bar__item"]}>
-        <Link href="/projects">Projects</Link>
-      </div>
-      <div className={styles["nav-bar__item"]}>
-        <Link href="/">Home</Link>
-      </div>
-      <div className={styles["nav-bar__item"]}>
-        <Link href="/experiences">Experiences</Link>
-      </div>
+      <Link href="/projects" className={styles["nav-bar__item"]}>
+        <div>Projects</div>
+      </Link>
+      <Link href="/" className={styles["nav-bar__item"]}>
+        <div>Home</div>
+      </Link>
+      <Link href="/experiences" className={styles["nav-bar__item"]}>
+        <div>Experiences</div>
+      </Link>
     </div>
   );
 };

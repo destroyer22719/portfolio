@@ -3,7 +3,6 @@ import TagComponent from "./TagComponent";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Image from "next/image";
 import styles from "../styles/components/ProjectCard.module.scss";
-// import { IconContext } from "react-icons";
 
 type Props = {
   name: string;
@@ -44,7 +43,12 @@ const ProjectCard: React.FC<Props> = ({
       </div>
       <div className={styles["project-card__tags"]}>
         {tags.map((tag, i) => (
-          <TagComponent tag={tag} key={i} />
+          <TagComponent
+            className={styles["project-card__tag"]}
+            iconClassName={styles["project-card__tag-icon"]}
+            tag={tag}
+            key={i}
+          />
         ))}
       </div>
       <div>
