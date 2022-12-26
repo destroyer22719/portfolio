@@ -5,7 +5,19 @@ import TagComponent from "../components/TagComponent";
 import Link from "next/link";
 
 export default function Page() {
-  const skills = ["NodeJS", "ExpressJS", "NextJS", "SCSS", "MySQL"];
+  const skills = [
+    "NodeJS",
+    "ExpressJS",
+    "NextJS",
+    "SCSS",
+    "MySQL",
+    "CSS",
+    "HTML",
+    "ReactJS",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+  ];
   return (
     <div className={styles["home-page"]}>
       <div className={styles["home-page__header"]}>
@@ -57,7 +69,7 @@ export default function Page() {
             key={skill}
             size={30}
             className={styles["home-page__skills-item"]}
-            iconClassName={styles["home-page__skills-items-icon"]}
+            iconClassName={styles["home-page__skills-item-icon"]}
           />
         ))}
       </div>

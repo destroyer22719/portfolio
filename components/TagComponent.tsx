@@ -1,9 +1,14 @@
 import { FaNodeJs, FaReact, FaSass } from "react-icons/fa";
 import { RxGear } from "react-icons/rx";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMysql } from "react-icons/si";
-// import { IconContext } from "react-icons";
-import styles from "../styles/components/ProjectCard.module.scss";
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiPython,
+  SiTypescript,
+} from "react-icons/si";
 import Link from "next/link";
 
 type Prop = {
@@ -13,11 +18,11 @@ type Prop = {
   size?: number;
 };
 
-const TagToIcon: React.FC<{ tag: string; className: string, size?:number }> = ({
-  tag,
-  className,
-  size=20
-}) => {
+const TagToIcon: React.FC<{
+  tag: string;
+  className: string;
+  size?: number;
+}> = ({ tag, className, size = 20 }) => {
   switch (tag) {
     case "NodeJS":
       return <FaNodeJs size={size} className={className} />;
@@ -29,15 +34,30 @@ const TagToIcon: React.FC<{ tag: string; className: string, size?:number }> = ({
       return <FaSass size={size} className={className} />;
     case "MySQL":
       return <SiMysql size={size} className={className} />;
+    case "TypeScript":
+      return <SiTypescript size={size} className={className} />;
+    case "JavaScript":
+      return <SiJavascript size={size} className={className} />;
+    case "CSS":
+      return <SiCss3 size={size} className={className} />;
+    case "HTML":
+      return <SiHtml5 size={size} className={className} />;
+    case "Python":
+      return <SiPython size={size} className={className} />;
     default:
       return <RxGear size={size} className={className} />;
   }
 };
-const TagComponent: React.FC<Prop> = ({ tag, className, iconClassName, size }) => {
+const TagComponent: React.FC<Prop> = ({
+  tag,
+  className,
+  iconClassName,
+  size,
+}) => {
   return (
     <Link href={`/projects?tag=${tag}`}>
       <div className={className}>
-        <TagToIcon tag={tag} className={iconClassName} size={size}/>
+        <TagToIcon tag={tag} className={iconClassName} size={size} />
         <div>{tag}</div>
       </div>
     </Link>

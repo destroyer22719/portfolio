@@ -91,6 +91,10 @@
       margin: 0.5rem;
       align-items: center;
       display: flex;
+
+      &-icon {
+        margin-right: 0.5rem;
+      }
     }
 
     &-item:hover {
