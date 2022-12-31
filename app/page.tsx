@@ -24,17 +24,17 @@ function Page() {
   }, []);
 
   const skills = [
-    "NodeJS",
-    "ExpressJS",
-    "NextJS",
-    "SCSS",
-    "MySQL",
-    "CSS",
-    "HTML",
-    "ReactJS",
-    "JavaScript",
-    "TypeScript",
-    "Python",
+    { name: "NodeJS", link: true },
+    { name: "ExpressJS", link: true },
+    { name: "NextJS", link: true },
+    { name: "ReactJS", link: false },
+    { name: "SCSS", link: true },
+    { name: "MySQL", link: true },
+    { name: "CSS", link: true },
+    { name: "HTML", link: true },
+    { name: "JavaScript", link: true },
+    { name: "TypeScript", link: true },
+    { name: "Python", link: false },
   ];
   return (
     <div className={styles["home-page"]}>
@@ -103,8 +103,9 @@ function Page() {
           <>
             {skills.map((skill, i) => (
               <TagComponent
-                tag={skill}
-                key={skill}
+                tag={skill.name}
+                key={skill.name}
+                link={skill.link}
                 size={30}
                 className={styles["home-page__skills-item"]}
                 iconClassName={styles["home-page__skills-item-icon"]}

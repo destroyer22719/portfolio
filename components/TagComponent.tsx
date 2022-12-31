@@ -16,6 +16,7 @@ type Prop = {
   className: string;
   iconClassName: string;
   size?: number;
+  link?: boolean;
 };
 
 const TagToIcon: React.FC<{
@@ -50,12 +51,13 @@ const TagToIcon: React.FC<{
 };
 const TagComponent: React.FC<Prop> = ({
   tag,
+  link=true,
   className,
   iconClassName,
   size,
 }) => {
   return (
-    <Link href={`/projects?tag=${tag}`}>
+    <Link href={link ? `/projects?tag=${tag}` : "/projects"}>
       <div className={className}>
         <TagToIcon tag={tag} className={iconClassName} size={size} />
         <div>{tag}</div>

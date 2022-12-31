@@ -50,6 +50,7 @@ const ProjectCard: React.FC<Props> = ({
             iconClassName={styles["project-card__tag-icon"]}
             tag={tag}
             key={i}
+            link={true}
           />
         ))}
       </div>
