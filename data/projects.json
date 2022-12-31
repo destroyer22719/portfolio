@@ -15,7 +15,7 @@
   },
   {
     "name": "Cross Spiral",
-    "desc": "A Visualized solution to the Cross Spiral puzzle from a former Canadian Computing Competition question.",
+    "desc": "A visualized solution to the Cross Spiral puzzle from a former Canadian Computing Competition question.",
     "url": "https://www.npmjs.com/package/email-cleaner",
     "github": "https://destroyer22719.github.io/Spiraling-Circle-Challenge/",
     "tags": ["JavaScript", "TypeScript"]
