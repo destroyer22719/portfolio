@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: $red_orange;
@@ -12,6 +12,7 @@
   transition: box-shadow 0.2s ease-in-out;
   margin: 1rem;
   width: 100%;
+  min-height: 20rem;
 
   @media screen and (min-width: 750px) {
     width: 75rem;
@@ -20,8 +21,6 @@
   &:hover {
     box-shadow: 0 0 2rem darken($red_orange, 20%);
   }
-
-
 
   &__header {
     word-wrap: break-all;
@@ -34,8 +33,9 @@
       flex-direction: row;
     }
 
-    a:visited, a {
-      color: $purple_dark1
+    a:visited,
+    a {
+      color: $purple_dark1;
     }
 
     h3 {
@@ -48,7 +48,8 @@
     }
 
     &--loader {
-      background-color: $purple_dark1;
+      width: 50%;
+      height: 2.5rem;
     }
   }
 
@@ -63,9 +64,15 @@
     align-items: center;
     flex-wrap: wrap;
 
-    a, a:visited {
+    a,
+    a:visited {
       text-decoration: none;
       color: inherit;
+    }
+
+    &--loader {
+      width: 25%;
+      height: 1.5rem;
     }
   }
 
@@ -93,11 +100,37 @@
   }
 
   &__icon-section {
-    display:flex
+    display: flex;
   }
 
   &__desc {
     font-size: 2rem;
     color: $purple_dark1;
+
+    &--loader {
+      width: 100%;
+      height: 7.5rem;
+    }
+  }
+
+  &--loader {
+    display: block;
+    border-radius: 0.5rem;
+    background: linear-gradient(
+        to right,
+        rgba($purple_light3, 0),
+        rgba($purple_light3, 0.5) 50%,
+        rgba($purple_light3, 0) 80%
+      ),
+      $purple_dark1;
+    background-repeat: repeat-y;
+    background-size: 50px 500px;
+    background-position: 0 0;
+    animation: shine 1s infinite;
+  }
+  @keyframes shine {
+    to {
+      background-position: 100% 0, /* move highlight to right */ 0 0;
+    }
   }
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import path from "path";
 import ClearButton from "../../components/ClearButton";
 import ProjectCard from "../../components/ProjectCardComponent";
+import ProjectLoadingCardComponent from "../../components/ProjectLoadingCardComponent";
 import styles from "../../styles/pages/ProjectsPage.module.scss";
 
 const getProjects = async (search?: string, tag?: string) => {
@@ -34,7 +35,9 @@ const getProjects = async (search?: string, tag?: string) => {
   }
 
   //delete duplicates
-  return result.filter((v,i,a)=>a.findIndex(v2=>(v2.name===v.name))===i);
+  return result.filter(
+    (v, i, a) => a.findIndex((v2) => v2.name === v.name) === i
+  );
 };
 
 const ProjectsPage = async ({
@@ -71,6 +74,7 @@ const ProjectsPage = async ({
             url={url}
           />
         ))}
+        <ProjectLoadingCardComponent />
       </div>
     </div>
   );
