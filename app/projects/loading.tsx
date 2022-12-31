@@ -1,6 +1,10 @@
+import ProjectLoadingCardComponent from "../../components/ProjectLoadingCardComponent"
+
 const ProjectsLoading = () => {
   return (
-    <div>Loading...</div>
+    <div>
+      <ProjectLoadingCardComponent/>
+    </div>
   )
 }
 

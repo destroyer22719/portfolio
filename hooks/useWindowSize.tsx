@@ -10,7 +10,7 @@ function useWindowSize() {
     // Handler to call on window resize
     function handleResize() {
       // Set window width/height to state
-      setWindowSize(window.innerWidth);
+        setWindowSize(window?.innerWidth || undefined);
     }
 
     // Add event listener

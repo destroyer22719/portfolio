@@ -1,25 +1,27 @@
 "use client";
-import { useState } from "react";
 
+import { useState, useEffect } from "react";
 import styles from "../styles/pages/HomePage.module.scss";
 import { FaLinkedin, FaGithub, FaFileCsv } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import TagComponent from "../components/TagComponent";
 import Link from "next/link";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi";
-import useWindowSize from "../hooks/useWindowSize";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useEffect } from "react";
 
 function Page() {
-  const size = useWindowSize();
-  const [expand, setExpand] = useState<boolean>(false);
+  const [expand, setExpand] = useState<boolean>(true);
 
   useEffect(() => {
-    if (size && size > 750) {
+    if (window.innerWidth > 750) {
       setExpand(true);
     }
-  }, [size]);
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 750) {
+        setExpand(true);
+      }
+    });
+  }, []);
 
   const skills = [
     "NodeJS",

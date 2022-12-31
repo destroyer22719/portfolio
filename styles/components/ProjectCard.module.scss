@@ -21,6 +21,8 @@
     box-shadow: 0 0 2rem darken($red_orange, 20%);
   }
 
+
+
   &__header {
     word-wrap: break-all;
     display: flex;
@@ -43,6 +45,10 @@
 
     * {
       margin: 0;
+    }
+
+    &--loader {
+      background-color: $purple_dark1;
     }
   }
 
