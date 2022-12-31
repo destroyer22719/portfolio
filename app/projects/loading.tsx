@@ -6,6 +6,8 @@ const ProjectsLoading = () => {
     <div>
       <div className={styles["projects-page__projects-list"]}>
         <ProjectLoadingCardComponent />
+        <ProjectLoadingCardComponent />
+        <ProjectLoadingCardComponent />
       </div>
     </div>
   );

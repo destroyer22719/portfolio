@@ -31,7 +31,8 @@
       "skills skills skills skills";
   }
 
-  &__links, &__skills {
+  &__links,
+  &__skills {
     padding: 2.5rem;
   }
 
@@ -124,7 +125,7 @@
 
       &-icon {
         margin: 0;
-        
+
         & + div {
           display: none;
         }
@@ -143,6 +144,21 @@
       color: $purple_dark2;
       background-color: $purple_light2;
       border-radius: 1rem;
+    }
+  }
+
+  &--fade-from-bot {
+    animation: fadeInBottom 0.5s ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
     }
   }
 }

@@ -10,9 +10,6 @@ const NavBar = () => {
       <Link href="/" className={styles["nav-bar__item"]}>
         <div>Home</div>
       </Link>
-      <Link href="/experiences" className={styles["nav-bar__item"]}>
-        <div>Experiences</div>
-      </Link>
     </div>
   );
 };

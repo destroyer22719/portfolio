@@ -38,16 +38,20 @@ function Page() {
   ];
   return (
     <div className={styles["home-page"]}>
-      <div className={styles["home-page__header"]}>
+      <div
+        className={`${styles["home-page__header"]} ${styles["home-page--fade-from-bot"]}`}
+      >
         <h1>Nathan Cai</h1>
       </div>
       <div
-        className={styles["home-page__expand"]}
+        className={`${styles["home-page__expand"]} ${styles["home-page--fade-from-bot"]}`}
         onClick={() => setExpand(!expand)}
       >
         {expand ? <BiDownArrow size={40} /> : <BiUpArrow size={40} />}
       </div>
-      <div className={styles["home-page__links"]}>
+      <div
+        className={`${styles["home-page__links"]} ${styles["home-page--fade-from-bot"]}`}
+      >
         {expand && (
           <>
             <Link href={"https://www.linkedin.com/in/nathan-cai-dev/"}>
@@ -67,7 +71,9 @@ function Page() {
           </>
         )}
       </div>
-      <div className={styles["home-page__text"]}>
+      <div
+        className={`${styles["home-page__text"]} ${styles["home-page--fade-from-bot"]}`}
+      >
         <div>
           Hi there! I'm a computer science student at Queen's University, with a
           strong background in both front-end and back-end development. I have
@@ -90,7 +96,9 @@ function Page() {
           knowledge in the field.
         </div>
       </div>
-      <div className={styles["home-page__skills"]}>
+      <div
+        className={`${styles["home-page__skills"]} ${styles["home-page--fade-from-bot"]}`}
+      >
         {expand && (
           <>
             {skills.map((skill, i) => (

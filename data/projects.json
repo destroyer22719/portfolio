@@ -5,5 +5,19 @@
     "url": "https://foodflation.me",
     "github": "https://github.com/destroyer22719/FoodFlation",
     "tags": ["NodeJS", "ExpressJS", "NextJS", "SCSS", "MySQL"]
+  },
+  {
+    "name": "Email Cleaner",
+    "desc": "An NPM package that cleans up email addresses by removing all the extra characters and symbols that would've been sent to the same email addresses without it.",
+    "url": "https://www.npmjs.com/package/email-cleaner",
+    "github": "https://github.com/destroyer22719/email-cleaner",
+    "tags": ["JavaScript", "TypeScript"]
+  },
+  {
+    "name": "Cross Spiral",
+    "desc": "A Visualized solution to the Cross Spiral puzzle from a former Canadian Computing Competition question.",
+    "url": "https://www.npmjs.com/package/email-cleaner",
+    "github": "https://destroyer22719.github.io/Spiraling-Circle-Challenge/",
+    "tags": ["JavaScript", "TypeScript"]
   }
 ]

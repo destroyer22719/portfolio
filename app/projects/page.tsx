@@ -74,7 +74,6 @@ const ProjectsPage = async ({
             url={url}
           />
         ))}
-        <ProjectLoadingCardComponent />
       </div>
     </div>
   );

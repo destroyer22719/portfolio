@@ -133,4 +133,20 @@
       background-position: 100% 0, /* move highlight to right */ 0 0;
     }
   }
+
+  &--fade-from-bot {
+    animation: fadeInBottom 0.5s ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }

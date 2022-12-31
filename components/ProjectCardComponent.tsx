@@ -22,7 +22,9 @@ const ProjectCard: React.FC<Props> = ({
   tags,
 }) => {
   return (
-    <div className={styles["project-card"]}>
+    <div
+      className={`${styles["project-card"]} ${styles["project-card--fade-from-bot"]}`}
+    >
       <div className={styles["project-card__header"]}>
         <h3>{name}</h3>
         <div className={styles["project-card__icon-section"]}>
