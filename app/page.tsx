@@ -54,18 +54,24 @@ function Page() {
       >
         {expand && (
           <>
-            <Link href={"https://www.linkedin.com/in/nathan-cai-dev/"}>
+            <Link
+              href={"https://www.linkedin.com/in/nathan-cai-dev/"}
+              target="_blank"
+            >
               <FaLinkedin className={styles["home-page__link"]} size={50} />
             </Link>
-            <Link href={"https://github.com/destroyer22719"}>
+            <Link href={"https://github.com/destroyer22719"} target="_blank">
               <FaGithub className={styles["home-page__link"]} size={50} />
             </Link>
-            <Link href={"mailto:nathan.cai.ca@gmail.com"}>
+            <Link href={"mailto:nathan.cai.ca@gmail.com"} target="_blank">
               <div title="nathan.cai.ca@gmail.com">
                 <GrMail className={styles["home-page__link"]} size={50} />
               </div>
             </Link>
-            <Link href="#">
+            <Link
+              href="https://drive.google.com/file/d/1RGZ3lTyQPxc_kDe9USod7IwUPZ78KOWE/view?usp=sharing"
+              target="_blank"
+            >
               <FaFileCsv className={styles["home-page__link"]} size={50} />
             </Link>
           </>
