@@ -29,7 +29,7 @@ const ProjectCard: React.FC<Props> = ({
         <h3>{name}</h3>
         <div className={styles["project-card__icon-section"]}>
           {url && (
-            <Link href={url}>
+            <Link href={url} target="_blank">
               <FiExternalLink
                 size={30}
                 className={styles["project-card__icon"]}
@@ -37,7 +37,11 @@ const ProjectCard: React.FC<Props> = ({
             </Link>
           )}
           {github && (
-            <Link href={github} className={styles["project-card__header"]}>
+            <Link
+              href={github}
+              className={styles["project-card__header"]}
+              target="_blank"
+            >
               <FiGithub size={30} className={styles["project-card__icon"]} />
             </Link>
           )}
