@@ -69,7 +69,7 @@ function Page() {
               </div>
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1RGZ3lTyQPxc_kDe9USod7IwUPZ78KOWE/view?usp=sharing"
+              href="https://bit.ly/3WOMRey"
               target="_blank"
             >
               <FaFileCsv className={styles["home-page__link"]} size={50} />
