@@ -3,7 +3,6 @@ import Link from "next/link";
 import path from "path";
 import ClearButton from "../../components/ClearButton";
 import ProjectCard from "../../components/ProjectCardComponent";
-import ProjectLoadingCardComponent from "../../components/ProjectLoadingCardComponent";
 import styles from "../../styles/pages/ProjectsPage.module.scss";
 
 const getProjects = async (search?: string, tag?: string) => {
@@ -13,26 +12,26 @@ const getProjects = async (search?: string, tag?: string) => {
   );
 
   let result: Project[] = [];
-
+  
   if (tag) {
-    result = result.concat(
-      data.filter((proj) => proj.tags.includes(tag as string))
-    );
+    result = [...data.filter((proj) => proj.tags.includes(tag))];
+    console.log(result)
   } else if (search) {
-    result = result.concat(
-      data.filter((proj) =>
-        proj.name.toLowerCase().includes((search as string).toLowerCase())
-      )
-    );
+    result = [
+      ...data.filter((proj) =>
+        proj.name.toLowerCase().includes((search).toLowerCase())
+      ),
+    ];
 
-    result = result.concat(
-      data.filter((proj) =>
-        proj.desc.toLowerCase().includes((search as string).toLowerCase())
-      )
-    );
+    result = [
+      ...data.filter((proj) =>
+        proj.desc.toLowerCase().includes((search).toLowerCase())
+      ),
+    ];
   } else {
     result = data;
   }
+
 
   //delete duplicates
   return result.filter(

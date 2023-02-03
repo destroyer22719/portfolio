@@ -27,14 +27,14 @@ function Page() {
     { name: "NodeJS", link: true },
     { name: "ExpressJS", link: true },
     { name: "NextJS", link: true },
-    { name: "ReactJS", link: false },
+    { name: "ReactJS", link: true },
     { name: "SCSS", link: true },
     { name: "MySQL", link: true },
     { name: "CSS", link: true },
     { name: "HTML", link: true },
     { name: "JavaScript", link: true },
     { name: "TypeScript", link: true },
-    { name: "Python", link: false },
+    { name: "Python", link: true },
   ];
   return (
     <div className={styles["home-page"]}>

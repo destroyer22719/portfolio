@@ -19,5 +19,12 @@
     "url": "https://www.npmjs.com/package/email-cleaner",
     "github": "https://destroyer22719.github.io/Spiraling-Circle-Challenge/",
     "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "name": "ScholarScribe",
+    "desc": "Made for QHacks 2023. ScholarScribe is a web application that uses AI to generate notes from uploaded lecture videos",
+    "url": "https://devpost.com/software/scholarscribe",
+    "github": "https://github.com/ammarlakda/scholarscribe",
+    "tags": ["Python", "ReactJS"]
   }
 ]

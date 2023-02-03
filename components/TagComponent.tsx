@@ -27,7 +27,7 @@ const TagToIcon: React.FC<{
   switch (tag) {
     case "NodeJS":
       return <FaNodeJs size={size} className={className} />;
-    case "React":
+    case "ReactJS":
       return <FaReact size={size} className={className} />;
     case "NextJS":
       return <TbBrandNextjs size={size} className={className} />;
