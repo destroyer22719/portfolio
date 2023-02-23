@@ -26,5 +26,11 @@
     "url": "https://devpost.com/software/scholarscribe",
     "github": "https://github.com/ammarlakda/scholarscribe",
     "tags": ["Python", "ReactJS"]
+  },
+  {
+    "name": "RSA Factorization with Distributed Computing",
+    "desc": "A program that finds RSA Factorization using distributed computing for the Compute.for(COMPSA) Hackathon. Won distinction for most impactful project.",
+    "github": "https://github.com/destroyer22719/Compute.for-COMPSA-",
+    "tags": ["JavaScript"]
   }
 ]
