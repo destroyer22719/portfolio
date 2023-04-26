@@ -69,7 +69,7 @@ function Page() {
               </div>
             </Link>
             <Link
-              href="https://bit.ly/3X0lpKq"
+              href="/resume.pdf"
               target="_blank"
             >
               <FaFileCsv className={styles["home-page__link"]} size={50} />
