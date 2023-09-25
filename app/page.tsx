@@ -81,10 +81,10 @@ function Page() {
         className={`${styles["home-page__text"]} ${styles["home-page--fade-from-bot"]}`}
       >
         <div>
-          Hi there! I'm a computer science student at Queen's University, with a
+          Hi there! I{"'"}m a computer science student at Queen{"'"}s University, with a
           strong background in both front-end and back-end development. I have
           experience working on a variety of projects, including developing a
-          backend API for the Queen's Computing Students Association, and
+          backend API for the Queen{"'"}s Computing Students Association, and
           organizing a hackathon, and several code projects!
         </div>
         <div>
@@ -97,7 +97,7 @@ function Page() {
         <div>
           In addition to my technical skills, I have strong problem-solving
           abilities and enjoy tackling challenges in a collaborative and
-          efficient manner. I'm always looking for opportunities to learn and
+          efficient manner. I{"'"}m always looking for opportunities to learn and
           grow as a developer, and am excited to continue building my skills and
           knowledge in the field.
         </div>
